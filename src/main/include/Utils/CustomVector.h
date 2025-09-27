@@ -207,11 +207,6 @@ class CustomVector {
     printf("x:%f y:%f a:%f\n", x.value(), y.value(), angle.value());
   }
 
-  /**
-   * @brief Default constructor
-   */
-  CustomVector() {}
-
  private:
   units::inch_t x = 0_in;
   units::inch_t y = 0_in;

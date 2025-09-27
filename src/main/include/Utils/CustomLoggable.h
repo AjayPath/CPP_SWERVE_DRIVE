@@ -6,5 +6,6 @@
 
 class CustomLoggable {
  public:
-  virtual void ShowOnDashboard();
+  virtual void ShowOnDashboard() = 0;
+  virtual ~CustomLoggable() {}
 };

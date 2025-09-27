@@ -43,4 +43,5 @@
 // Custom
 #include "Calculations.h"
 #include "Constants.h"
+#include "Utils/CustomLoggable.h"
 #include "Utils/CustomVector.h"
