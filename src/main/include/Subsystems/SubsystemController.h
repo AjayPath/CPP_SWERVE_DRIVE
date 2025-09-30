@@ -5,6 +5,7 @@
 #pragma once
 #include "Utils/BaseSubsystem.h"
 #include "Utils/CustomLoggable.h"
+#include "SubsystemIncludes.h"
 
 class SubsystemController : public BaseSubsystem, public CustomLoggable {
  public:
@@ -26,5 +27,7 @@ class SubsystemController : public BaseSubsystem, public CustomLoggable {
     ~SubsystemController(void);
 
     static SubsystemController* instance;
+
+    DriveSubsystem* _Drive;
 
 };

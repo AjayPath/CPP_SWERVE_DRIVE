@@ -8,6 +8,7 @@
 
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
+#include "Subsystems/SubsystemController.h"
 
 class Robot : public frc::TimedRobot {
  public:
@@ -25,8 +26,12 @@ class Robot : public frc::TimedRobot {
   void SimulationPeriodic() override;
 
  private:
-  frc::SendableChooser<std::string> m_chooser;
-  const std::string kAutoNameDefault = "Default";
-  const std::string kAutoNameCustom = "My Auto";
-  std::string m_autoSelected;
+  // frc::SendableChooser<std::string> m_chooser;
+  // const std::string kAutoNameDefault = "Default";
+  // const std::string kAutoNameCustom = "My Auto";
+  // std::string m_autoSelected;
+
+  SubsystemController* _SubsystemController = SubsystemController::GetInstance();
+  Controllers* _GamePads = Controllers::GetInstance();
+  std::string rioID;
 };
