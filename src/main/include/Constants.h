@@ -40,6 +40,7 @@ static constexpr double DEG_TO_RAD = std::numbers::pi / 180;
 static constexpr int DRIVING_MOTOR_PINION_TEETH = 13;
 static constexpr units::scalar_t DRIVE_GEAR_RATIO = (45.0 * 22.0) / (DRIVING_MOTOR_PINION_TEETH * 15.0);
 static constexpr units::scalar_t STEER_GEAR_RATIO = 3.0 * 4.0 * (62.0 / 13.0);
+static constexpr units::scalar_t WHEEL_DIAMETER = 3;
 
 static constexpr units::inch_t X_OFFSET_FORWARD = 14.0_in;
 static constexpr units::inch_t X_OFFSET_BACK = 14.0_in;

@@ -4,4 +4,55 @@
 
 #include "Subsystems/SubsystemController.h"
 
-SubsystemController::SubsystemController() = default;
+SubsystemController* SubsystemController::instance = NULL;
+
+SubsystemController* SubsystemController::GetInstance() {
+    if (instance == NULL) {
+        instance = new SubsystemController();
+    }
+    return instance;
+}
+
+SubsystemController::SubsystemController(void) {
+
+} 
+
+SubsystemController::~SubsystemController(void) {
+
+}
+
+// FRC Functions
+void SubsystemController::RobotInit() {
+    
+}
+
+void SubsystemController::RobotPeriodic() {
+    
+}
+
+void SubsystemController::DisabledInit() {
+    
+}
+
+void SubsystemController::DisabledPeriodic() {
+    
+}
+
+void SubsystemController::TeleopInit() {
+    
+}
+
+void SubsystemController::TeleopPeriodic() {
+    
+}
+
+void SubsystemController::AutonomousInit() {
+    
+}
+
+void SubsystemController::AutonomousPeriodic() {
+}
+
+void SubsystemController::ShowOnDashboard() {
+    
+}

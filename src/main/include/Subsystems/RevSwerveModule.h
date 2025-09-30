@@ -7,7 +7,7 @@
 // Supports SparkMax with NEO motors and Through Bore Absolute Encoders
 // Absolute encoder shares CAN ID with turning motor
 
-class REVSwerveModule {
+class RevSwerveModule {
    public:
     /**
      * @brief Construct a new REV Swerve Module
@@ -18,11 +18,11 @@ class REVSwerveModule {
      * @param invertDriveMotor Invert drive motor direction
      * @param invertSteerMotor Invert steer motor direction (for turning motor, not encoder)
      */
-    REVSwerveModule(int driveID, int steerID, 
+    RevSwerveModule(int driveID, int steerID, 
                     units::inch_t _xOffset, units::inch_t _yOffset, 
                     bool invertDriveMotor = false, bool invertSteerMotor = false);
     
-    ~REVSwerveModule();
+    ~RevSwerveModule();
 
     // FRC methods
     void TeleopInit();
