@@ -24,24 +24,4 @@ class BaseSubsystem {
 
   Controllers* GamePads = Controllers::GetInstance();
 
-  void SetMotorPercent(rev::spark::SparkMax& motor, double speed) {
-    motor.Set(speed);
-  }
-  
-  void SetMotorVoltage(rev::spark::SparkMax& motor, double voltage) {
-    motor.SetVoltage(units::voltage::volt_t(voltage));
-  }
-
-  void PositionControl(rev::spark::SparkMax& motor, SimPID& pid, double currentPosition, double maxVoltage = 12.0) {
-    double pidOutput = pid.calcPID(currentPosition);
-    double voltage = pidOutput * maxVoltage;
-    motor.SetVoltage(units::voltage::volt_t(voltage));
-  }
-
-  void VelocityControl(rev::spark::SparkMax& motor, SimPID& pid, double currentVelocity, double maxVoltage) {
-    double pidOutput = pid.calcPID(currentVelocity);
-    double voltage = pidOutput * maxVoltage;
-    motor.SetVoltage(units::voltage::volt_t(voltage));
-  }
-
 };
