@@ -57,8 +57,8 @@ void RevSwerveModule::ConfigureDriveMotor() {
     driveConfig.Inverted(isDriveInverted);
 
     DriveMotor->Configure(driveConfig,
-                          rev::spark::SparkMax::ResetMode::kResetSafeParameters,
-                          rev::spark::SparkMax::PersistMode::kPersistParameters);
+                          rev::spark::SparkMax::ResetMode::kNoResetSafeParameters,
+                          rev::spark::SparkMax::PersistMode::kNoPersistParameters);
         
 }
 
@@ -87,8 +87,8 @@ void RevSwerveModule::ConfigureSteerMotor() {
     steerConfig.Inverted(isSteerInverted);
 
     SteerMotor->Configure(steerConfig,
-                          rev::spark::SparkMax::ResetMode::kResetSafeParameters,
-                          rev::spark::SparkMax::PersistMode::kPersistParameters);
+                          rev::spark::SparkMax::ResetMode::kNoResetSafeParameters,
+                          rev::spark::SparkMax::PersistMode::kNoPersistParameters);
 
 }
 
@@ -129,7 +129,7 @@ units::degree_t RevSwerveModule::GetSteerAngle() {
 }
 
 units::degree_t RevSwerveModule::GetSteerAngle360() {
-    double angle = GetSteerAngle360().value();
+    double angle = GetSteerAngle().value();
 
     while (angle < 0.0) angle += 360.0;
     while (angle >= 360.0) angle -= 360.0;
@@ -154,8 +154,8 @@ void RevSwerveModule::BrakeDriveMotor(bool _brakesOn) {
     }
 
     DriveMotor->Configure(driveConfig,
-                          rev::spark::SparkMax::ResetMode::kResetSafeParameters,
-                          rev::spark::SparkMax::PersistMode::kPersistParameters);
+                          rev::spark::SparkMax::ResetMode::kNoResetSafeParameters,
+                          rev::spark::SparkMax::PersistMode::kNoPersistParameters);
 
 }
 

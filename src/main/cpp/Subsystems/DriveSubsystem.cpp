@@ -7,8 +7,8 @@
 
 DriveSubsystem::DriveSubsystem(void) {
     swerveModule = new RevSwerveModule(
-        10,
-        11,
+        13,
+        14,
         0_in,
         0_in,
         false,

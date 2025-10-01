@@ -21,7 +21,7 @@ PigeonGyro* PigeonGyro::GetInstance() {
  * @brief Constructor for PigeonGyro - initializes hardware and timers
  */
 PigeonGyro::PigeonGyro(void) {
-    Gyro = new ctre::phoenix6::hardware::Pigeon2(PIGEON_ID, "DriveBus");
+    Gyro = new ctre::phoenix6::hardware::Pigeon2(PIGEON_ID, "");
     GyroAngleTimer = new frc::Timer();
     GyroAngleTimer->Start();
     GyroPitchTimer = new frc::Timer();
@@ -38,6 +38,7 @@ PigeonGyro::PigeonGyro(void) {
  * @return Current angle in degrees
  */
 units::degree_t PigeonGyro::GetAngle() {
+    Gyro->GetYaw().Refresh();
     return units::degree_t(Gyro->GetYaw().GetValue());
 }
 

@@ -18,7 +18,7 @@ inline bool USE_COMP_VALUE;
 inline Alliances currAlliance;
 
 // Hardware IDs
-#define PIGEON_ID 50
+#define PIGEON_ID 24
 
 // Drivebase IDs
 #define FR_DRIVE_MOTOR_ID 1

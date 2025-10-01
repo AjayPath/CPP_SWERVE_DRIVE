@@ -82,9 +82,9 @@ class DriveSubsystem : public BaseSubsystem, public CustomLoggable {
   bool resetOffsetValues = false;
   bool brakesEnabled = false;
 
-  static constexpr double TurnP = 0.009;
+  static constexpr double TurnP = 0.01;
   static constexpr double TurnI = 0.0;
-  static constexpr double TurnD = 0.009;
+  static constexpr double TurnD = 0.0;
 
   static constexpr double DriveP = 0.02;
   static constexpr double DriveI = 0.0;
